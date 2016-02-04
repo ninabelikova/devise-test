@@ -8,6 +8,24 @@
 </head>
 <body>
 
+<!-- Header -->
+<header id="header">
+  <h2>Banane</h2>
+  <nav id="nav">
+    <%= link_to "home", root_path %>
+    <% if user_signed_in? %>
+    <%= link_to "let me out", destroy_user_session_path, method: :delete %>
+    <% else %>
+    <%= link_to "sign up", new_user_registration_path %>
+    <%= link_to "let me in", new_user_session_path %>
+    <% end %>
+  </nav>
+</header>
+
+<div class="notifications">
+  <% if notice %><%= notice %><% end %>
+  <% if notice %><%= alert %><% end %>
+</div>
 <%= yield %>
 
 </body>

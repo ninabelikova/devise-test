@@ -1,0 +1,21 @@
+
+<% if user_signed_in? %>
+<div class="dashboard">
+  <h2>Your decks:</h2>
+  <% if current_user.decks.any? %>
+  <%= render @decks %>
+    <% end %>
+    <%= form_for(@new_deck) do |f| %>
+    <%= f.text_field :name, placeholder: "name" %>
+    <%= f.submit "create new deck" %>
+    <% end %>
+
+</div>
+
+<% else %>
+<section id="banner">
+  <h2><strong>Banane</strong>, is a cute simplistic quiz app.</h2>
+  <%= link_to "Get started", new_user_registration_path %>
+</section>
+
+<% end %>

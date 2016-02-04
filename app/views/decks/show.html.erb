@@ -1,0 +1,13 @@
+<%= @deck.name %>
+<% if @deck.questions.any? %>
+<%= render @questions %>
+<% end %>
+<h1>Add a question!</h1>
+<%= form_for(@new_question) do |f| %>
+<%= f.text_field :text, placeholder: "question" %>
+<%= f.text_field :answer1, placeholder: "answer" %>
+<%= f.text_field :answer2, placeholder: "answer" %>
+<%= f.text_field :answer3, placeholder: "answer" %>
+<%= hidden_field_tag "deck_id", value = @deck.id %>
+<%= f.submit "add question" %>
+<% end %>
