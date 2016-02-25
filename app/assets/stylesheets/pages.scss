@@ -1,3 +1,108 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
+
+
+/* General */
+
+html {
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  background-color: rgb(241, 196, 15);
+}
+
+h2 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
+
+/* Header */
+
+#header {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  top:0;
+  left: 0;
+  height: 5em;
+  z-index: 100;
+  position: absolute;
+  color: black;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+#header a {
+  float: left;
+  color: #222;
+  text-decoration: none;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#header h1 {
+  margin-left: 20px;
+}
+
+#header nav {
+  margin-right: 3em;
+}
+
+#header nav a {
+  display: inline-block;
+  float: right;
+  font-size: 1.5em;
+  padding-left: 40px;
+}
+
+
+/* Banner */
+
+#banner {
+  padding: 8em 0 6em;
+}
+
+#banner h2 {
+  border-style: double solid;
+  border-width: 10px 4px;
+  font-size: 3em;
+  line-height: 1.35em;
+  margin: 0 auto 1em;
+  padding: 1.1em;
+  position: relative;
+  width: 40%;
+}
+
+#banner p {
+  margin: 3em 0 2em;
+  font-size: 1.7em;
+  text-transform: uppercase;
+}
+
+#banner a {
+  line-height: 2.95em;
+  padding: .7em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #333;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+}
+
+
+/* Content */
+
+#content {
+  margin-top: 10em;
+}

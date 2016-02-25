@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DeviseTest</title>
+  <title>Banane</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,7 +10,7 @@
 
 <!-- Header -->
 <header id="header">
-  <h2>Banane</h2>
+  <h1><%= link_to "Banane", root_path %></h1>
   <nav id="nav">
     <%= link_to "home", root_path %>
     <% if user_signed_in? %>
@@ -22,11 +22,15 @@
   </nav>
 </header>
 
-<div class="notifications">
-  <% if notice %><%= notice %><% end %>
-  <% if notice %><%= alert %><% end %>
+<div id="content">
+  <div class="notifications">
+    <% if notice %><%= notice %><% end %>
+    <% if notice %><%= alert %><% end %>
+  </div>
+
+  <%= yield %>
+
 </div>
-<%= yield %>
 
 </body>
 </html>
